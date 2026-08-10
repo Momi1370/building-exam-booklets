@@ -55,6 +55,21 @@ Answer every confirmed exam question **inline at its concept** (🎯 marker), an
 ### Phase 5 — Build and verify
 Build with a **self-contained** python-docx script (see `booklet-format.md`) and verify before claiming done.
 
+### Phase 6 — After handoff: the booklet becomes the student's own document
+Once you hand over the first built `.docx`, the student will keep studying from it across many later sessions and will often **hand-edit it directly in Word** (splitting a section, fixing a typo, pasting in something you taught them). From that point on:
+- **Never write to the `.docx` again.** Build a read-only **plain-text mirror**: a script that walks `doc.element.body.iterchildren()` in true document order (paragraphs + tables interleaved, since callouts live in tables) and dumps everything to a single searchable `.py`/`.txt` file. Regenerate it every time the student says they edited the source.
+- **Read the mirror, not the old build modules.** The python modules that generated the first draft go stale the moment the student hand-edits the `.docx` — grep/read the mirror when checking "what does the booklet actually say," never trust the generator script's memory of its own output.
+- **Treat this phase as recurring deep audits, not a one-time build.** Expect to revisit sections weeks later: re-teach a topic from scratch against the real slides/transcripts/recordings (not just the booklet's own text), and report gaps — content that's compact but was never actually verified against the source, a concept the student flags as hard needing a fuller walkthrough, or a genuine mismatch between the booklet and the real materials.
+- **Watch for hand-edit artifacts.** Manually splitting/merging paragraphs in Word can silently merge two heading lines into one (content stays intact but a section number disappears from the document's navigation) — if a section number you expect doesn't show up as its own heading in the mirror, check for this before assuming it was never written.
+
+## Two patterns learned from deep audit passes (add during Phase 6, not the first build)
+
+**The DEPTH block.** When re-teaching later reveals a section's original compact Define→Explain→Example wasn't actually enough to *learn* the concept from cold (common for anything with a counterintuitive twist — multivalued dependencies, weak entities), don't replace the compact section. Insert a labeled `DEPTH —` sub-block directly under it: start from a concrete broken/worked example grounded in the real lecture material, build up step by step to the formal definition, and close with a short recap. This keeps the fast-reference version intact for quick review while giving the student a full walkthrough the one time they actually need to build the mental model. Use sparingly — only where a real re-teaching session showed the compact version wasn't enough.
+
+**Exam-appearance and synthesis callouts.** Two more callout types worth using once the student has real exam intel or the topic has several similar-looking methods to distinguish:
+- **🎯 "How it appears in the exam"** — a worked Q&A phrased exactly the way the exam would ask it, placed right after the concept, not deferred to a separate question bank.
+- **A synthesis callout after several parallel methods** ("the one thing to keep straight across all of them") — one line per method mapping *the question phrasing* to *which method answers it*. Exams on this kind of material usually test whether the student can pick the right method for a given question, not recite any one method in isolation.
+
 ## Grading Rules (drive every answer)
 
 1. **Own words, but course terminology only.** A "generally correct" answer that uses a different framework loses marks.
@@ -77,3 +92,5 @@ The full DS4B format spec (palette, banner/callout/flag styles, the `examq` answ
 - **Reordering away from the lecture.** Mirror the lecture's own section order so the student can diff against their notes.
 - **A non-self-contained build script.** `/tmp` gets wiped mid-session; embed the styling engine and back up to the scratchpad (see `booklet-format.md`).
 - **Claiming done without verifying** 0 stray asterisks / all images present & explained / all banners & flags present.
+- **Editing the `.docx` yourself after handoff.** Once the student owns the document, you only read it (via the Phase 6 mirror) — writing to it directly overwrites their own edits.
+- **Trusting the stale build script over the mirror.** After a few rounds of hand-editing, the original `.py` module and the real `.docx` diverge; always re-generate and read the mirror, never assume the module still matches.

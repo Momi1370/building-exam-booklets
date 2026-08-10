@@ -13,6 +13,8 @@ Reference for `building-exam-booklets`. The visual spec, the python-docx engine,
   - **🎓 PROFESSOR'S NOTE** (TEAL) — said only in the recording.
   - **🔑 KEY EXAM POINT** (GREEN), **⚠ EXAM TRAP** (RED), **✍ EXAM TIP** (AMBER), **🧠 MEMORY HOOK** (PURPLE, e.g. D-E-E-L).
 - **🎯 Q&A FLAG** badge (magenta/purple) — placed at every concept the exam-info session pointed to.
+  - **🎯 "How it appears in the exam"** (MAGENTA) — a worked Q&A phrased the way the exam would actually ask it, inline right after the concept (added during Phase 6 audits, once real exam-question style is known).
+  - **DEPTH —** (no colour bar, just a bold labelled sub-heading) — an optional full step-by-step re-teach inserted directly under a compact section, for concepts a re-teaching session showed needed a fuller walkthrough. Never replaces the compact version, sits underneath it.
 
 ### Palette (hex)
 ```
