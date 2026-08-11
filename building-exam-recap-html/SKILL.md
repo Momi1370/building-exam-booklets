@@ -9,7 +9,7 @@ description: Use when a student already has a full HTML reference page (from bui
 
 Turn a finished full reference page into a **fast-recap layer**: one condensed page per module, plus a merged all-modules page. The full page is where you *learn* a topic; the recap is where you *re-read* it — on the fifth pass, the morning of the exam, on a phone.
 
-This is a downstream skill. It does not replace `building-exam-reference-html`; it compresses its output.
+This is a downstream skill. It does not replace `building-exam-reference-html`; it compresses its output. Downstream of *this* skill sits `building-exam-answer-layer`, which turns a finished recap into writing practice.
 
 ## Core principle
 
@@ -22,7 +22,7 @@ This is a downstream skill. It does not replace `building-exam-reference-html`; 
 3. **Open every module with a "spine"** — one line per numbered subsection, stating that section's single load-bearing claim. This is the actual recap: the student reads eight lines and only drops into a section when a line fails to fire. Everything else on the page is there to be *skipped*.
 4. **Convert prose to term → gloss rows.** Any list where each item needs a sentence of explanation becomes a two-column row — bold term, one-line gloss. Characteristics, constraints, criteria, phases, framework components. This is the single biggest space win and it reads faster than the prose did.
 5. **Compress anecdotes to their trigger phrase.** The professor's stories are memory anchors and must survive, but they survive as a clause, not a paragraph — "nine women / one baby", "New Coke: feasible, desirable, not viable", "970 files, finished two weeks early". One line, keeping the punchline that makes it stick.
-6. **Collapse practice questions to one-line answer skeletons** — the moves, arrow-separated, with the structural verbs bolded. Enough to rehearse the shape of an answer without re-reading a model answer the student has already absorbed.
+6. **Collapse practice questions to one-line answer skeletons** — the moves, arrow-separated, with the structural verbs bolded. Enough to rehearse the shape of an answer without re-reading a model answer the student has already absorbed. **If the student's problem turns out to be writing speed rather than reading speed** — many questions, few minutes each, "I know it, I just can't write it fast enough" — stop here and use `building-exam-answer-layer` instead, which keeps the full answer and adds a compact writable one above it.
 7. **Keep tables at full size.** Comparison tables, formula tables, solved-exercise tables. They are already the fastest thing on the page to read, and in this kind of exam each row is typically a separately gradable point. Cutting rows buys almost no reading time and costs marks.
 8. **Use a denser typography than the full page** — sans-serif, tighter leading, smaller margins, hairline separators. The recap should *look* like a different mode, so the student knows which pass they are on. Keep the same colour-coded callout taxonomy so the flags (exam traps, confirmed-question markers) stay recognisable across both versions.
 9. **Audit, and report the ratio.** Diff the recap's section list against the full page's — they must match exactly, in order. Check tags balance and internal links resolve in every file including the merge. Then measure words-per-module against the full page and give the student the table. The ratio is information, not decoration: a module that barely compressed is telling you it was already dense.
