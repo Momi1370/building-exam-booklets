@@ -1,0 +1,6 @@
+# macOS Finder metadata
+.DS_Store
+
+# Packaged copies of the skills — clone the repo instead, so you get the
+# current version of all of them rather than a stale snapshot of one.
+*.zip
