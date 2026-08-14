@@ -1,6 +1,6 @@
 # building-exam-booklets
 
-Four [Claude Code](https://claude.com/claude-code) **skills** that turn a university course's own materials into exam-ready study assets for **closed-book, open-question exams graded against the professor's model answers**:
+Five [Claude Code](https://claude.com/claude-code) **skills** that turn a university course's own materials into exam-ready study assets for **closed-book, open-question exams graded against the professor's model answers**:
 
 1. **`building-exam-booklets`** — turns slide decks, lecture notes, transcripts, and study guidelines into a single colour-coded, exam-ready **Word booklet** (`.docx`) you read instead of the slides.
 2. **`building-exam-reference-html`** — turns a topic of that (already-built, possibly hand-edited) booklet into a standalone, interactive **HTML study page** — clickable worked examples, a theme toggle, a purpose index — for the final review pass before the exam.
@@ -9,7 +9,9 @@ Four [Claude Code](https://claude.com/claude-code) **skills** that turn a univer
 
 Use them in order: build the booklet first, study from it (editing it yourself in Word as you go), then turn whichever topics you want into a browsable HTML page, compress that into a recap you can re-read in minutes, and finally add the answer layer once the problem stops being *knowing* the material and becomes *writing it fast enough*.
 
-**Learn → browse → re-read → rehearse.** Each skill assumes the one before it is done.
+**Learn → browse → re-read → rehearse.** Each of those four assumes the one before it is done.
+
+5. **`teaching-exam-sections`** — the odd one out, and the one you may reach for most. It builds nothing. It **teaches you one section out loud**, from the professor's own slides and the assigned book chapter, then sets you a drill it already holds the answer key for and marks what you send back. Use it at any point, on any section, with or without the other four.
 
 **Two HTML versions, and you pick per topic:**
 
@@ -104,6 +106,26 @@ It also says the honest thing out loud: you rarely have to detect a framework fr
 
 **Use:** once a topic's recap is solid, say *"I can't write these fast enough, make a compact exam-answer version"*, or invoke `/building-exam-answer-layer` directly.
 
+## 5. `teaching-exam-sections`
+
+The other four assume the problem is that your material is in the wrong *shape*. Sometimes the problem is that you have read a section three times and still don't understand it.
+
+This skill builds nothing. It teaches you **one numbered section at a time, in conversation**, and its governing rule is: **you must invent the case detail, you must never invent the course content.** Before saying a word about section 4.1, it reads your professor's own slides for it and the assigned chapter of the assigned book, and then keeps three things visibly separate as it teaches — what *she* said, what the *book* said, and what is merely an illustration. In an exam graded against model answers, the framework's own vocabulary is what scores, so knowing which words are safe to reproduce matters as much as understanding them.
+
+What a taught section actually contains:
+
+- **Where it sits, and why the slide exists at all.** Not "here is the Devil's Quadrangle" but "module 3 found what was wrong, module 4 changes it, and this section answers *how do you know the change is an improvement*." A section you can place is a section you can retrieve.
+- **The definitions verbatim**, hers and the book's, side by side. Paraphrase is where marks quietly die.
+- **An attack on the everyday meaning of every term.** The predictable failure is not forgetting a definition, it's reading a technical word with its ordinary English sense. "Flexibility" is not *having options*, it's *the ability to react to change* — and a student who misses that loses the mark while feeling confident.
+- **The professor's own worked example first**, before any example of the skill's own. Hers is the one the grader has in mind.
+- **A drill it already holds the answer key for** — a textbook exercise with a published solution, a past exam question — and then it stops and waits for you.
+
+When you send an answer back, it marks by **separating what was right from what was wrong, precisely**: naming the correct parts explicitly, then correcting one thing at a time with the source. Reasoning that applied a real part of the definition to the wrong object gets credit and an explanation of *which* rule you reached for, because that misfire teaches more than a blank answer does. And when its own ambiguous phrasing caused the error, it says so before correcting you.
+
+Finally, if a study page from the other skills exists, it offers to **write the mistake you just made back into that page as a trap, in your own case**. A generic warning about a trap is worth little. The trap you personally fell into, in the wording of the case you fell for, is worth a great deal on the fifth read.
+
+**Use:** say *"teach me 4.1"*, *"teach mode"*, or invoke `/teaching-exam-sections` directly. It works standalone — a slide deck and nothing else is a complete starting point, and it will never insist you build a booklet first.
+
 ## Install
 
 You need [Claude Code](https://claude.com/claude-code) — this is instructions *for Claude*, not a standalone app.
@@ -114,11 +136,12 @@ cp -R building-exam-booklets/building-exam-booklets       ~/.claude/skills/
 cp -R building-exam-booklets/building-exam-reference-html ~/.claude/skills/
 cp -R building-exam-booklets/building-exam-recap-html     ~/.claude/skills/
 cp -R building-exam-booklets/building-exam-answer-layer   ~/.claude/skills/
+cp -R building-exam-booklets/teaching-exam-sections       ~/.claude/skills/
 ```
 
 Then start (or restart) Claude Code — it auto-discovers any folder in `~/.claude/skills/`.
 
-Install only what you need — the four are independent folders. The booklet skill stands alone; `building-exam-recap-html` expects a page built by `building-exam-reference-html` to compress; `building-exam-answer-layer` edits whichever HTML page you already have.
+Install only what you need — the five are independent folders. The booklet skill stands alone; `building-exam-recap-html` expects a page built by `building-exam-reference-html` to compress; `building-exam-answer-layer` edits whichever HTML page you already have; `teaching-exam-sections` needs nothing but your course documents.
 
 > On a shared team repo instead? Copy the skill folders to `.claude/skills/` inside that repo and everyone who clones it gets them.
 
@@ -136,6 +159,7 @@ Install only what you need — the four are independent folders. The booklet ski
 | `building-exam-reference-html/SKILL.md` | HTML reference-page workflow: the section-by-section approval loop, procedural-vs-theoretical example style, page shape, and the end-of-topic audit. |
 | `building-exam-recap-html/SKILL.md` | Recap-layer workflow: what compresses and what must not, the spine, the fragments-plus-assembler build, and the ratio audit. |
 | `building-exam-answer-layer/SKILL.md` | Answer-layer workflow: the exam-logistics intake, how a compact answer is derived and stamped, the trigger sheet, and the depth-2 audit. |
+| `teaching-exam-sections/SKILL.md` | Teaching workflow: the source-first rule, what a taught section contains, drills with real answer keys, how to mark, and feeding the student's own mistakes back into the study page. |
 
 ## License
 
