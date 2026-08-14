@@ -26,23 +26,25 @@ The corollary: if the materials don't cover something, say so out loud rather th
 
 ## Workflow
 
-1. **Find the section in the real materials before saying anything about it.** Locate the slides, then the assigned chapter. Extract both. If the deck references an embedded video, find its transcript. Only then start teaching. Teaching a section you have only *recalled* is how invented content gets in.
+1. **Find the section in the real materials before saying anything about it.** Locate the slides, then the assigned chapter, then the work-session exercises. Extract them. If the deck references an embedded video, find its transcript. Only then start teaching. Teaching a section you have only *recalled* is how invented content gets in.
 
-2. **Open with where the section sits and why the slide exists.** Not "here is the Devil's Quadrangle" but "module 3 was analysis, module 4 changes the process, and this section answers *how do you know the change is an improvement*." A section the student can place is a section they can retrieve. Look for the professor's own scoping cues ("focus in this lecture", a slide she returns to repeatedly) — those tell you what the module is really about.
+2. **Set the depth from the lecture, not from the textbook.** The assigned chapter always goes deeper than the lecturer did, and a student cannot deploy depth their lecturer never covered — it crowds out the material that will actually be marked. Where the lecture names something without defining it, the book supplies the definition; beyond that, the book is background. **When the lecturer only *lists* something as a name in a table, teaching it in depth is a scope error**, and the student will tell you so by not being able to answer.
 
-3. **Quote the definitions; don't paraphrase them.** Put her slide's wording and the book's fuller wording side by side, both verbatim. Paraphrase is where marks quietly die, and the student needs to know which exact words are safe to reproduce.
+3. **Open with where the section sits and why the slide exists.** Not "here is the Devil's Quadrangle" but "module 3 was analysis, module 4 changes the process, and this section answers *how do you know the change is an improvement*." A section the student can place is a section they can retrieve. Look for the professor's own scoping cues ("focus in this lecture", a slide she returns to repeatedly) — those tell you what the module is really about.
 
-4. **Attack the everyday meaning of every term.** The predictable failure is not forgetting a definition, it is reading a technical term with its ordinary English sense — "flexibility" as *having options* rather than *the ability to react to change*. For each term ask: what will they think this means, and what does it actually mean here? That gap is the lesson.
+4. **Quote the definitions; don't paraphrase them.** Put her slide's wording and the book's fuller wording side by side, both verbatim. Paraphrase is where marks quietly die, and the student needs to know which exact words are safe to reproduce.
 
-5. **Work the professor's own example first**, in full, before any example of yours. Hers is the one the grader has in mind.
+5. **Attack the everyday meaning of every term.** The predictable failure is not forgetting a definition, it is reading a technical term with its ordinary English sense — "flexibility" as *having options* rather than *the ability to react to change*. For each term ask: what will they think this means, and what does it actually mean here? That gap is the lesson.
 
-6. **End every section with a drill whose official answer you already hold** — a textbook exercise with a published solution, a past exam question, a worked case from the slides. Then stop and wait. Marking against a real answer key is honest; marking against your own opinion teaches the student your preferences. If no answer key exists for any exercise in the section, say that when setting the drill.
+6. **Work the professor's own example first**, in full, before any example of yours. Hers is the one the grader has in mind.
 
-7. **Mark by separating what was right from what was wrong, precisely.** Name the correct parts explicitly and briefly — a student who is told "good, but…" doesn't learn which half was good. Then correct exactly one thing at a time, sourced. Give partial credit where the reasoning used a real part of the definition on the wrong object; that misfire is more instructive than a blank answer, and telling them *which* rule they reached for is the actual teaching.
+7. **End every section with a drill whose official answer you already hold** — a textbook exercise with a published solution, a past exam question, a worked case from the slides. Then stop and wait. Marking against a real answer key is honest; marking against your own opinion teaches the student your preferences. If no answer key exists for any exercise in the section, say that when setting the drill.
 
-8. **When you were the cause, say so first.** Ambiguous phrasing on your side ("read it left to right") produces confident wrong answers. Naming that before the correction keeps the student's trust in their own reasoning, which is the thing you most need intact.
+8. **Mark by separating what was right from what was wrong, precisely.** Name the correct parts explicitly and briefly — a student who is told "good, but…" doesn't learn which half was good. Then correct exactly one thing at a time, sourced. Give partial credit where the reasoning used a real part of the definition on the wrong object; that misfire is more instructive than a blank answer, and telling them *which* rule they reached for is the actual teaching.
 
-9. **Feed the mistake back into the study page** (sequence mode only, and only when there is one). A mistake the student actually made, written into the page as a trap in their own case, is worth more than any generic warning. Propose the edits ranked, get approval, edit by marker-based string surgery, re-run the page's audit. Do not silently rewrite their page.
+9. **When you were the cause, say so first.** Ambiguous phrasing on your side ("read it left to right") produces confident wrong answers. Naming that before the correction keeps the student's trust in their own reasoning, which is the thing you most need intact.
+
+10. **Feed the mistake back into the study page** (sequence mode only, and only when there is one). A mistake the student actually made, written into the page as a trap in their own case, is worth more than any generic warning. Propose the edits ranked, get approval, edit by marker-based string surgery, re-run the page's audit. Do not silently rewrite their page.
 
 ## What a taught section contains
 
@@ -63,4 +65,6 @@ Roughly in this order. Not a template to fill mechanically — sections differ �
 - **Marking generously without marking precisely.** "Good attempt, but flexibility is actually positive" teaches nothing. Name which bullet of the definition they reached for and which one the case actually sits in.
 - **Answering the drill for them in the same message.** Set it and stop. The value is in the gap between their answer and the key.
 - **Letting the compact study page absorb everything the conversation produced.** The page is a recap. Add the trap, the correction, and the case — not the lecture.
+- **Teaching the textbook's depth instead of the lecturer's.** If she named Lean in one cell of one table and never explained it, the student needs it classified, not explained. Depth she never taught is depth the student cannot use and will not be marked on.
+- **Treating a study guide's learning goals as a fence.** They tell you where the emphasis is, not what is excluded. Confirmed past questions routinely land on material no learning goal mentions. Rank by: past questions first, then everything in the lectures, then the guide's emphasis.
 - **Requiring the family's earlier skills.** If the student wants section 4.3 taught from a PDF and nothing else, that is a complete, valid request.
