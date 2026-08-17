@@ -9,7 +9,9 @@ Six [Claude Code](https://claude.com/claude-code) **skills** that turn a univers
 3. **`building-exam-recap-html`** — compresses that page into a **fast-recap layer**: one short page per module plus a merged all-modules page, for the fifth pass and the morning of the exam.
 4. **`building-exam-answer-layer`** — turns that recap into **writing practice**: a compact, writable exam answer above every question with the full one collapsed beneath, plus a trigger sheet mapping question phrasing to the framework it wants.
 
-Use them in order: build the booklet first, study from it (editing it yourself in Word as you go), then turn whichever topics you want into a browsable HTML page, compress that into a recap you can re-read in minutes, and finally add the answer layer once the problem stops being *knowing* the material and becomes *writing it fast enough*.
+**That numbering is a dependency order, not a route you have to walk.** Its full form: build the booklet first, study from it (editing it yourself in Word as you go), turn whichever topics you want into a browsable HTML page, compress that into a recap you can re-read in minutes, and add the answer layer once the problem stops being *knowing* the material and becomes *writing it fast enough*.
+
+But plenty of real situations skip most of it. A student two days from a resit, who already understands the material, wants one recap-with-answers per topic and nothing else. That is a valid route, and picking it is what skill 0 is for.
 
 **Learn → browse → re-read → rehearse.** Each of those four assumes the one before it is done.
 
@@ -25,7 +27,9 @@ Use them in order: build the booklet first, study from it (editing it yourself i
 | **Depth** | Full explanation, worked examples, self-tests | One line per section, then the details you actually forgot | Both: a compact writable answer on top, the full one collapsed underneath |
 | **Built** | Section by section, with your approval each time | Compressed from the finished full page | Derived question by question from the answers already there |
 
-You do not have to choose once and for all. Build the full page for every topic, then add the recap layer only for the topics you keep re-reading, and the answer layer only if the exam's clock turns out to be the real constraint.
+You do not have to choose once and for all, and you do not have to build all three. With time to spare, build the full page for every topic, add the recap layer for the topics you keep re-reading, and the answer layer if the clock turns out to be the real constraint.
+
+**With the exam close, merge the last two and skip the first.** One recap-plus-answer-layer file per topic — compact answer on top, full answer collapsed underneath — is usually the right single artifact, because two files per topic means every correction has to be made twice and you end up trusting neither.
 
 ## 0. `exam-prep-intake`
 
@@ -85,8 +89,12 @@ How it compresses:
 - **Practice questions collapse to one-line answer skeletons** — the moves, arrow-separated, structural verbs bolded.
 - **Tables stay at full size.** They're already the fastest thing on the page, and in this kind of exam each row is usually its own gradable point. Cutting rows buys no time and costs marks.
 - **Denser typography than the full page**, so you can feel which pass you're on — but the same colour-coded flags, so confirmed-question markers and exam traps stay recognisable across both versions.
+- **What refuses to shrink gets ranked instead.** Some topics stay long because their sources are long. When a topic ends up dense out of proportion to its exam weight, the fix is not cutting it, it's a **triage block at the top**: a tier to *write cold*, a tier to *recognise*, and a tier to *read once and skip on the last pass*, each with a minute budget. "This is too much content" is almost always a reading-order complaint, not a length one — a topic worth a single exam question can still deserve eight sections, as long as the page says which three matter.
+- **Optionally, the topics get linked to each other** — a short per-section strip naming what the same idea is called elsewhere in the course, plus one shared table of **terms that mean different things in different topics**. That table is worth more than it looks: a word carrying two technical meanings in two topics is a silent mark loss, because the wrong sentence still reads perfectly fluently.
 
-It's built as **content fragments plus a small assembler** holding the shared CSS and the merge, so the per-module files and the merged file can't drift apart. The end-of-topic audit diffs the recap's section list against the full page's, checks tags and links in every file including the merge, and then reports the compression ratio per module.
+It's built as **content fragments plus a small assembler** holding the shared CSS and the merge, so the per-module files and the merged file can't drift apart.
+
+The end-of-topic audit is **a script you re-run on every topic, not an eyeball pass** — tag balance, collapsible depth, whether every internal link resolves, section numbers sequential with no gaps, and stray closing tags inside label spans. That distinction is not pedantry: on a real six-topic project the script caught a duplicated `</b>` that a careful read had already missed twice, and a heading that had silently merged two numbered sections into one. A page built carefully still needs checking mechanically.
 
 **That ratio is information, not decoration.** From a real 5-module project-management topic:
 
@@ -101,6 +109,8 @@ It's built as **content fragments plus a small assembler** holding the shared CS
 
 Module 4 barely compressed, and that's the point: it was earned-value calculations, a solved worked example and fixed step-lists — content that was already at minimum size. A module that refuses to shrink is telling you it was dense to begin with. Forcing every module to the same ratio would mean over-cutting that one.
 
+**One caveat on that table, and it is easy to get wrong.** Those figures are for a *pure* recap. The moment you merge `building-exam-answer-layer` into the same file — which is the sensible thing to do, and what the table in the intro recommends — the result is **larger** than the page it came from, because it now carries a compact answer, the full answer and the drills. Quoting a compression ratio there is actively misleading. Report band count, word count, section count and audit results instead.
+
 **Use:** once a topic's full HTML page is finished, say *"make a shorter recap version of this"* or *"merge the modules into one recap page"*, or invoke `/building-exam-recap-html` directly.
 
 ## 4. `building-exam-answer-layer`
@@ -114,6 +124,8 @@ The file also gains a collapsed **`⚡ Trigger sheet`** at the top, mapping *how
 What makes it work:
 
 - **It starts from the exam's real logistics.** Question count, duration, marks per question, pages. The minutes-per-question figure that falls out is the specification for how long every band may be. Without it, "compact" is just another opinion about length.
+- **The band order comes from *this* professor, and is never imported.** Their question verbs dictate it: *"in your own words explain … how is it constructed … why does it matter … suppose … give a concrete example … what are the risks"* is a specific order, and another lecturer's verbs give a different one. If the course publishes named question styles — *reproduce / relate / translate to an example / apply the technique* — every band gets tagged with which one it is, because each wants a different answer. Any published model answer is treated as the marking structure: if the official solution is laid out in three numbered steps, three numbered steps is the format. **One paper covering two lecturers gets two shapes.**
+- **It gives you an answering order, not just a per-question budget.** A budget says how long each answer may be; it doesn't say which question to write first, and on a paper with more questions than time *that* is what sets the mark. So the trigger sheet opens with a triage protocol: spend the first 5 to 10 minutes not writing, label every question on **payoff** (marks it carries) and **ease** (how fast *you* can write it), then answer in label order — high-marks-and-easy first, cheap-and-fast second, high-marks-and-hard third under a time cap, the rest last. Where a course already taught a prioritisation grid (a PICK chart, an effort-impact matrix), the skill reuses **that** grid's letters and axes, because a framework you can already draw from memory under pressure costs zero extra revision. Two rules override the grid: **nothing is ever left blank** — a borrowed framework may "kill" its bottom quadrant, but a blank scores zero for certain while a two-minute skeleton of named terms does not — and the real ordering rule is **marks per minute**, so a single hard question carrying a large share of the paper gets started early rather than last.
 - **Compact answers are derived, never rewritten.** A separately authored short answer drifts from the long one and the student stops trusting both.
 - **Bands are deliberately over-provisioned, ordered so the cut comes from the bottom.** The framework's own words go at the top and the polish at the end, so stopping two thirds of the way down still leaves a scoring answer. Give the student something to cut rather than something to run out of.
 - **Time estimates are per question, from counting graded elements.** A definition is 3 minutes; a draw-plus-apply is 10. A flat number makes every band the wrong length.
