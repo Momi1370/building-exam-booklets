@@ -90,12 +90,20 @@ Label each question on two axes the student can judge at reading time:
 | **High marks** | **I** · do **first** | **C** · do **third**, with a time cap |
 | **Low marks** | **P** · do **second**, cheap and fast | **K** · do **last**, but never blank |
 
-Two rules that matter more than the grid:
+**Prefer a framework the student already knows.** If their course taught a prioritisation grid — a PICK chart, an effort-impact matrix, a payoff matrix — reuse its letters and axes rather than inventing a scheme. They can already draw it from memory under pressure, which is the whole point, and it costs zero extra revision. Say which course and lecture it came from so the reuse is visible.
 
-- **Nothing is ever abandoned.** If the course this comes from calls the last quadrant "kill", say explicitly that an exam is the one place that word does not apply: a blank scores zero for certain, a two-minute skeleton of named terms scores something. The last quadrant means *last*, not *skipped*.
-- **The order is a default, not a law.** It is really *marks per minute*. If one hard question carries a large share of the paper, cap the easy low-mark ones and get to it while there is still thinking time left.
+Then state the **two adjustments** that a borrowed grid always needs, because a prioritisation framework built for choosing projects is not built for a graded paper:
 
-**Prefer a framework the student already knows.** If their course taught a prioritisation grid — a PICK chart, an effort-impact matrix, a payoff matrix — reuse its letters and axes rather than inventing a scheme. They will already be able to draw it from memory under pressure, which is the whole point, and it costs zero extra revision. Say which course and lecture it came from so the reuse is visible.
+**Adjustment 1 — you never actually kill.** In its home discipline the bottom quadrant means *don't do it*. In an exam a blank box scores **zero, guaranteed**, and two correct keywords beat an empty box. So rename that quadrant **"minimum viable answer"**: ninety seconds, the framework's name plus three or four keyword bullets, then move on. It is the only quadrant where the rule changes, and saying so out loud stops a student following a borrowed framework off a cliff.
+
+**Adjustment 2 — the real axis is marks per minute.** Payoff and ease are not two things to weigh separately, they **divide**. A 5-mark question writable in 4 minutes beats a 10-mark question that will take 25. That is also the reason the top-left quadrant goes first rather than merely early: it is the only one that wins on *both* axes at once, so it is strictly the best use of the student's freshest thinking.
+
+Then give them the protocol for the room itself:
+
+- **The opening minutes are not writing minutes.** Read every question and mark a letter in the margin. Answer nothing yet. This is what stops them discovering an easy high-mark question with twenty minutes left. Budget 5 minutes, or 8 to 10 on a long paper.
+- **Write the mark value next to each question** if the paper prints them, and a **rough minute budget** per section. The arithmetic is *(total minutes − scan time − mop-up window) ÷ sections*, and it should be done on the paper, not in their head.
+- **Then answer in label order**, top-left, then cheap-and-fast, then high-marks-and-hard, then mop up the rest.
+- **Put a hard cap on every high-marks-and-hard question.** When the cap hits, stop **mid-answer**, leave a few lines of blank space, and move on. They come back in the mop-up window. One such question left uncapped quietly kills two other answers, and that is the single most common way a well-prepared student loses a paper.
 
 Note the symmetry worth pointing out to them: `building-exam-recap-html` ranks *sections* into tiers for study time; this ranks *questions* into tiers for exam time. Same move, two different rooms.
 

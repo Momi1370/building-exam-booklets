@@ -125,7 +125,7 @@ What makes it work:
 
 - **It starts from the exam's real logistics.** Question count, duration, marks per question, pages. The minutes-per-question figure that falls out is the specification for how long every band may be. Without it, "compact" is just another opinion about length.
 - **The band order comes from *this* professor, and is never imported.** Their question verbs dictate it: *"in your own words explain … how is it constructed … why does it matter … suppose … give a concrete example … what are the risks"* is a specific order, and another lecturer's verbs give a different one. If the course publishes named question styles — *reproduce / relate / translate to an example / apply the technique* — every band gets tagged with which one it is, because each wants a different answer. Any published model answer is treated as the marking structure: if the official solution is laid out in three numbered steps, three numbered steps is the format. **One paper covering two lecturers gets two shapes.**
-- **It gives you an answering order, not just a per-question budget.** A budget says how long each answer may be; it doesn't say which question to write first, and on a paper with more questions than time *that* is what sets the mark. So the trigger sheet opens with a triage protocol: spend the first 5 to 10 minutes not writing, label every question on **payoff** (marks it carries) and **ease** (how fast *you* can write it), then answer in label order — high-marks-and-easy first, cheap-and-fast second, high-marks-and-hard third under a time cap, the rest last. Where a course already taught a prioritisation grid (a PICK chart, an effort-impact matrix), the skill reuses **that** grid's letters and axes, because a framework you can already draw from memory under pressure costs zero extra revision. Two rules override the grid: **nothing is ever left blank** — a borrowed framework may "kill" its bottom quadrant, but a blank scores zero for certain while a two-minute skeleton of named terms does not — and the real ordering rule is **marks per minute**, so a single hard question carrying a large share of the paper gets started early rather than last.
+- **It gives you an answering order, not just a per-question budget** — a triage protocol at the top of the trigger sheet, described in full below.
 - **Compact answers are derived, never rewritten.** A separately authored short answer drifts from the long one and the student stops trusting both.
 - **Bands are deliberately over-provisioned, ordered so the cut comes from the bottom.** The framework's own words go at the top and the polish at the end, so stopping two thirds of the way down still leaves a scoring answer. Give the student something to cut rather than something to run out of.
 - **Time estimates are per question, from counting graded elements.** A definition is 3 minutes; a draw-plus-apply is 10. A flat number makes every band the wrong length.
@@ -133,6 +133,31 @@ What makes it work:
 - **The trigger sheet's left column is phrasings, not concept names.** *"Why does this keep going wrong"*, not *"root-cause analysis"*. A sheet keyed on concept names is a glossary, and the student did not need a glossary.
 
 It also says the honest thing out loud: you rarely have to detect a framework from nothing, because most questions name the tool. That sentence removes more anxiety than the sheet itself does.
+
+### The answering order, and how to run it in the room
+
+A per-question budget tells you how long each answer may be. It does not tell you **which question to write first** — and on a paper with more questions than time, that is the decision that sets the mark. The failure this skill exists to prevent is not ignorance. It is three beautiful answers and ten blank boxes.
+
+So the trigger sheet opens with a triage grid. **Where your course already taught a prioritisation framework, the skill reuses that one** — a PICK chart, an effort-impact matrix, a payoff matrix — rather than inventing a scheme. A grid you can already draw from memory under pressure costs you zero extra revision, which is the entire point. The two axes become:
+
+- **Payoff** → how many marks the question carries
+- **Ease** → how fast and confidently *you* can write it
+
+|  | **Easy for me** | **Hard for me** |
+|---|---|---|
+| **High marks** | **I · IMPLEMENT** → do **first** | **C · CHALLENGE** → do **third**, with a time cap |
+| **Low marks** | **P · POSSIBLE** → do **second**, cheap and fast | **K** → do **last**, never blank |
+
+**Adjustment 1: you never actually kill.** This is the important one. In process redesign, Kill means *don't do it*. In an exam a blank box scores **zero, guaranteed**, and two correct keywords beat an empty box. So that quadrant gets renamed **"minimum viable answer"**: ninety seconds, the framework's name plus three or four keyword bullets, move on. It is the only quadrant where the borrowed framework's rule has to change, and a student who isn't told will follow it off a cliff.
+
+**Adjustment 2: the real axis is marks per minute.** Payoff and ease are not two things you weigh separately — they **divide**. A 5-mark question you can write in 4 minutes beats a 10-mark question that will take you 25. That is also why Implement goes first rather than merely early: it is the only quadrant that wins on *both* axes at once, so it is strictly the best use of your freshest thinking.
+
+**How to run it, in the room:**
+
+- **The opening minutes are not writing minutes.** Read every question and mark a letter in the margin. Answer nothing yet. Budget 5 minutes, or 8 to 10 on a long paper. This is the highest-value time on the whole exam, and it is what stops you discovering an easy high-mark question with twenty minutes left.
+- **Write the mark value next to each question** if the paper prints them, plus a rough **minute budget** per section: *(total minutes − scan time − mop-up window) ÷ sections*. Do that arithmetic on the paper, not in your head.
+- **Then answer I → P → C → mop up the K's.**
+- **Put a hard cap on every C.** When the cap hits, stop **mid-answer**, leave a few lines of blank space, and move on — you come back in the mop-up window. One uncapped Challenge question that eats forty minutes has quietly killed two other answers, and that is the most common way a well-prepared student loses a paper.
 
 **Use:** once a topic's recap is solid, say *"I can't write these fast enough, make a compact exam-answer version"*, or invoke `/building-exam-answer-layer` directly.
 
