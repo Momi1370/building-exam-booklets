@@ -5,6 +5,8 @@ description: Use when the user wants an exam-ready study booklet built from a un
 
 # Building Exam Booklets
 
+> **Start with `exam-prep-intake`** if the scope is not already settled. It asks one round of questions (what to build, what the exam is like, answer length, cross-topic links), derives the professor's answer shape, and hands over. Skip it only when those answers are already in hand.
+
 ## Overview
 
 Turn a university course's raw materials into a single colour-coded, exam-ready `.docx` booklet the student reads instead of the slides — and can diff line-by-line against their own lecture notes.

@@ -1,6 +1,8 @@
 # building-exam-booklets
 
-Five [Claude Code](https://claude.com/claude-code) **skills** that turn a university course's own materials into exam-ready study assets for **closed-book, open-question exams graded against the professor's model answers**:
+Six [Claude Code](https://claude.com/claude-code) **skills** that turn a university course's own materials into exam-ready study assets for **closed-book, open-question exams graded against the professor's model answers**:
+
+0. **`exam-prep-intake`** — the front door. Builds nothing. Reads your course folder, asks **one round of at most four questions** (what to build · what the exam is actually like · short answers, long, or both · should the topics be linked to each other), works out *this* professor's answer shape from their own question wording, then hands off to whichever skill below fits. Start here unless you already know exactly what you want.
 
 1. **`building-exam-booklets`** — turns slide decks, lecture notes, transcripts, and study guidelines into a single colour-coded, exam-ready **Word booklet** (`.docx`) you read instead of the slides.
 2. **`building-exam-reference-html`** — turns a topic of that (already-built, possibly hand-edited) booklet into a standalone, interactive **HTML study page** — clickable worked examples, a theme toggle, a purpose index — for the final review pass before the exam.
@@ -24,6 +26,22 @@ Use them in order: build the booklet first, study from it (editing it yourself i
 | **Built** | Section by section, with your approval each time | Compressed from the finished full page | Derived question by question from the answers already there |
 
 You do not have to choose once and for all. Build the full page for every topic, then add the recap layer only for the topics you keep re-reading, and the answer layer only if the exam's clock turns out to be the real constraint.
+
+## 0. `exam-prep-intake`
+
+The expensive failures in this family are not bad writing, they are **building the wrong artifact**: a full reference page for someone who only wanted a recap, an answer layer shaped like a different professor's marking scheme, forty pages of software instructions for an exam written by hand on paper. Each costs hours and stays invisible until you say "that is not what I meant."
+
+So this skill spends one round of questions first.
+
+- **Reads the folder before asking anything.** Topic structure, which source types exist, whether a transcript is there, whether different topics have **different professors**, and what study assets already exist. Anything it can detect, it does not ask. It reports what it found in three lines so you can correct a wrong reading before it costs anything.
+- **Asks at most four questions.** What should I build (Word booklet · full HTML page · recap with compact answers · nothing, just teach me) · tell me about the exam, including anything you remember from a previous sitting · how long should an answer be · do you want the topics connected to each other, or to another course you are sitting the same month.
+- **Derives the answer shape from the professor**, from their own question verbs and any published model answer, rather than importing one from another course. If one paper covers two lecturers, it builds two shapes.
+- **Ranks the plan** by confirmed past questions first, then the lectures, then the study guide's emphasis — and says plainly what it would cut if the exam is close.
+- **Builds one section, stops, and waits** for your approval before doing the rest.
+
+It also settles the scope questions the folder raises rather than the ones a template would: whether the practical sessions' **software is examinable** (usually it is not, in which case the technique stays and the tool goes), and whether an existing hand-edited booklet is the source of truth.
+
+**Use:** open Claude Code in your course folder and say *"help me study for this exam"*, or invoke `/exam-prep-intake` directly.
 
 ## 1. `building-exam-booklets`
 

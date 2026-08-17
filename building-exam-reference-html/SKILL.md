@@ -5,6 +5,8 @@ description: Use when a student wants a booklet topic turned into a browsable HT
 
 # Building Exam Reference HTML
 
+> **Start with `exam-prep-intake`** if the scope is not already settled. It asks one round of questions (what to build, what the exam is like, answer length, cross-topic links), derives the professor's answer shape, and hands over. Skip it only when those answers are already in hand.
+
 ## Overview
 
 Turn one topic of an already-approved exam booklet into a standalone, interactive HTML page the student reads instead of the booklet or slides before a closed-book exam. Complements `building-exam-booklets` (which builds the `.docx`) — this is the downstream, browsable layer.

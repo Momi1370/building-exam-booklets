@@ -5,6 +5,8 @@ description: Use when a student has a finished HTML study page and now needs to 
 
 # Building Exam Answer Layer
 
+> **Start with `exam-prep-intake`** if the scope is not already settled. It asks one round of questions (what to build, what the exam is like, answer length, cross-topic links), derives the professor's answer shape, and hands over. Skip it only when those answers are already in hand.
+
 ## Overview
 
 A finished study page tells the student **what is true**. It does not tell them **what to write in six minutes**.
@@ -40,7 +42,7 @@ The reason the layer works: **recognition is fast, reconstruction is what eats t
 
 ### 1. Get the exam's real logistics first. Do not skip this.
 
-This is the step that separates this skill from the others, and everything downstream depends on it. Ask for, or find:
+If `exam-prep-intake` ran, you already have these and must not re-ask. Otherwise, ask for or find:
 
 - **How many questions**, and how many bundles or parts.
 - **How long** the exam is.
@@ -59,6 +61,16 @@ minus ~15 min reading and checking  →  under 6
 **That number is the specification.** Six minutes means 8 to 12 lines, in bullets and keywords. It rules out the essay the page currently implies, and it tells you how long each compact band may be.
 
 It also reframes the student's fear, which is usually worth as much as the artifact. A 75% failure rate on a paper with this ratio is rarely people who did not know the material; it is people who wrote three beautiful answers and left ten blank.
+
+### 1b. Derive the answer shape from this professor, do not import one
+
+A compact answer is only compact in the right *order*. That order comes from the lecturer, and it is not transferable.
+
+- Collect their **question verbs** from review slides, sample questions and past papers. *"In your own words explain"*, *"how is it constructed"*, *"why is it important"*, *"suppose"*, *"give a concrete example"*, *"what are the risks"* dictates a specific band order: define → parts → why → apply → example → risk. A different lecturer's verbs dictate a different one.
+- Check whether the course **publishes named question styles**, for example *reproduce / relate / translate to an example / apply the technique*. If it does, tag every band with which style it is, because each wants a different answer: a named list, a two-column contrast plus the consequence, one concrete instance, or the working shown line by line.
+- Treat any **published model answer as the marking structure**. If the official solution is laid out in three numbered steps, three numbered steps is the format — that is not a study trick, it is the grader's own shape.
+
+**If one paper covers two lecturers, build two shapes.** Carrying one professor's structure into another's topic is a quiet, systematic way to lose marks across a whole topic.
 
 ### 2. Agree the shape on one question before building at scale
 

@@ -5,6 +5,8 @@ description: Use when a student wants a course section taught to them in convers
 
 # Teaching Exam Sections
 
+> **Start with `exam-prep-intake`** if the scope is not already settled. It asks one round of questions (what to build, what the exam is like, answer length, cross-topic links), derives the professor's answer shape, and hands over. Skip it only when those answers are already in hand.
+
 ## Overview
 
 Teach one numbered section of a course at a time, in conversation. Nothing gets built. The deliverable is that the student understands the section well enough to write it under exam conditions, and that you have found out what they *don't* understand by making them answer something.
