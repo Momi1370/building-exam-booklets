@@ -72,6 +72,33 @@ A compact answer is only compact in the right *order*. That order comes from the
 
 **If one paper covers two lecturers, build two shapes.** Carrying one professor's structure into another's topic is a quiet, systematic way to lose marks across a whole topic.
 
+### 1c. Give them an order to answer in, not just a budget
+
+Step 1 tells the student how many minutes each question is worth. It does not tell them **which question to write first**, and on a paper with more questions than time that is the decision that actually sets the mark. The documented failure is not ignorance, it is three beautiful answers and ten blanks.
+
+So put a **triage protocol** in the trigger sheet of every page you build:
+
+> **The first minutes are not writing minutes.** Read the whole paper, label every question, then answer in label order. Budget about 5 minutes, or 8 to 10 if the paper is long.
+
+Label each question on two axes the student can judge at reading time:
+
+- **Payoff** → how many marks it carries
+- **Ease** → how fast and confidently *this student* can write it
+
+|  | Easy for me | Hard for me |
+|---|---|---|
+| **High marks** | **I** · do **first** | **C** · do **third**, with a time cap |
+| **Low marks** | **P** · do **second**, cheap and fast | **K** · do **last**, but never blank |
+
+Two rules that matter more than the grid:
+
+- **Nothing is ever abandoned.** If the course this comes from calls the last quadrant "kill", say explicitly that an exam is the one place that word does not apply: a blank scores zero for certain, a two-minute skeleton of named terms scores something. The last quadrant means *last*, not *skipped*.
+- **The order is a default, not a law.** It is really *marks per minute*. If one hard question carries a large share of the paper, cap the easy low-mark ones and get to it while there is still thinking time left.
+
+**Prefer a framework the student already knows.** If their course taught a prioritisation grid — a PICK chart, an effort-impact matrix, a payoff matrix — reuse its letters and axes rather than inventing a scheme. They will already be able to draw it from memory under pressure, which is the whole point, and it costs zero extra revision. Say which course and lecture it came from so the reuse is visible.
+
+Note the symmetry worth pointing out to them: `building-exam-recap-html` ranks *sections* into tiers for study time; this ranks *questions* into tiers for exam time. Same move, two different rooms.
+
 ### 2. Agree the shape on one question before building at scale
 
 Mock up a single question with both layers and show it. A topic can easily have 40 to 60 questions, and rebuilding them all because the band was too long, too terse, or wrongly stamped is the most expensive mistake available here.
@@ -125,7 +152,7 @@ A collapsed block at the very top of the file. Three columns: **how a question i
 
 Then say the honest thing in the sheet itself: **you rarely have to detect a framework from nothing.** Most questions name the tool, or the module makes it obvious. The sheet is for the two or three that do not. Saying this removes more anxiety than the sheet does.
 
-Close the sheet with the moves that work on every question (name the framework in the course's words · apply it with the case's own nouns · always give an example · state the trade-off) and the timing rule from step 1.
+Close the sheet with the moves that work on every question (name the framework in the course's words · apply it with the case's own nouns · always give an example · state the trade-off), the timing rule from step 1, and the **triage protocol from step 1c** — the label-then-answer order belongs at the top of the sheet, because it is the first thing the student does on the day and the only part they use before writing a single word.
 
 ### 8. Adapt the emphasis to each topic's mark structure
 
@@ -175,3 +202,6 @@ Beyond the usual tag balance and link resolution:
 - **Building all 50 before showing one.** Agree the shape first.
 - **Forgetting the depth-2 audit.** Nesting a collapsible inside a collapsible is where this skill breaks pages.
 - **Skipping the logistics step and guessing.** Without minutes-per-question there is no principled length, and the whole layer becomes another opinion about how much to write.
+- **Giving a per-question budget but no answering order.** On a paper with more questions than time, the order decides the mark. A budget alone lets the student spend it in the worst possible sequence.
+- **Inventing a triage scheme when the course already taught one.** A grid the student can draw from memory beats a better grid they have to learn the week of the exam.
+- **Letting "kill" mean "leave blank".** Borrowed prioritisation frameworks discard the bottom quadrant. An exam never does. Rename it out loud, or the student will follow the framework off a cliff.
